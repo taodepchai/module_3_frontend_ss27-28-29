@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function check(n) {
+        if (n % 2 === 0) {
+          return "chan";
+        } else return "le";
+      }
+      function get_random(a) {
+        return Math.floor(Math.random() * a);
+      }
+      for (let i=0;i<3;i++){
+        let temp = get_random(100);
+        console.log(`${temp} la so  ${check(temp)}`);
+      }
+    </script>
+  </body>
+</html>

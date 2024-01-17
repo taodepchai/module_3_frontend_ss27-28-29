@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function get_str(str) {
+        let str_list = [];
+        let d = 0;
+        for (let i = 0; i < str.length; i++) {
+          for (let j = i + 1; j <= str.length; j++) {
+            str_list.push(str.slice(i, j));
+          }
+        }
+        return str_list;
+      }
+      let str = prompt("Nhap so phan tu cua mang ");
+      let result = get_str(str);
+      console.log(result);
+    </script>
+  </body>
+</html>

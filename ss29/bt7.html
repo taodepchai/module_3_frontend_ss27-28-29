@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function find_number(arr, sum) {
+        let find = [];
+        let temp = 0;
+        for (let i = 0; i < arr.length; i++) {
+          let current = arr[i];
+          temp = sum - current;
+          if (find.includes(temp)) {
+            return temp;
+          }
+          find.push(current);
+        }
+      }
+      let arr = [1, 2, 3, 4, 5, 6, 7];
+      let sum = +prompt("nhap tong");
+      let num = find_number(arr, sum);
+      if (num !== undefined) {
+        document.write(num, " ", sum - num);
+      }
+    </script>
+  </body>
+</html>

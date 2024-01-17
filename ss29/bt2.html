@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function number_length(n) {
+        let d = 0;
+        var temp = n;
+        while (temp !== 0) {
+          temp = Math.floor((n /= 10));
+          d++;
+        }
+        return d;
+      }
+      function string_length(str) {
+        return str.length;
+      }
+      function find(arr1, arr2) {
+        let max = arr2[0];
+        let index = 0;
+        for (let i = 1; i < arr1.length; i++) {
+          if (max < arr2[i]) {
+            max = arr2[i];
+            index = i;
+          }
+        }
+        return arr1[index];
+      }
+      let arr1 = [1, 12, 7654, "acbaf", "mcn"];
+      let arr2 = [];
+      for (let i = 0; i < arr1.length; i++) {
+        if (!isNaN(arr1[i])) {
+          arr2[i] = number_length(arr1[i]);
+        } else arr2[i] = string_length(arr1[i]);
+      }
+      console.log(find(arr1, arr2));
+    </script>
+  </body>
+</html>

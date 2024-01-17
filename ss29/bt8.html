@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function check(str1, str2) {
+        let temp1 = str1.sort().join("");
+        let temp2 = str2.split("").sort().join("");
+        if (temp1 === temp2) {
+          return true;
+        } else return false;
+      }
+      let str1 = ["a", "c", "d", "b"];
+      let str2 = prompt("nhap vao 1 chuoi");
+      document.write(check(str1, str2));
+    </script>
+  </body>
+</html>

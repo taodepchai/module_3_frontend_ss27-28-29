@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let str = prompt("nhap chuoi");
+      let s = prompt("nhap 1 ki tu");
+      function check(str, s) {
+        let d = 0;
+        for (let i = 0; i < str.length; i++) {
+          if (str[i] === s) {
+            d++;
+          }
+        }
+        return d;
+      }
+      document.write(check(str, s));
+    </script>
+  </body>
+</html>

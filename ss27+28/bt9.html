@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let numbers = [1, 2, 3, 4, 5];
+      let newArr = numbers;
+      newArr.push(8);
+      console.log(newArr);
+      console.log(numbers);
+    //   Tham trị được sử dụng cho các kiểu dữ liệu nguyên thủy như String, Number, Boolean, BigInt, Symbol, undefined, và null. 
+    //   Khi bạn gán hoặc truyền một biến kiểu nguyên thủy, giá trị của biến được sao chép vào một vị trí bộ nhớ mới
+
+
+    // Tham chiếu được sử dụng cho các kiểu dữ liệu phức tạp như Object, Array, và Function. 
+    // Khi bạn gán hoặc truyền một biến kiểu phức tạp, thực chất bạn đang truyền địa chỉ của 
+    // vùng nhớ mà biến đó tham chiếu đến, không phải giá trị thực sự.
+
+
+    // Khi bạn làm việc với biến kiểu nguyên thủy, giá trị của chúng được lưu trực tiếp trong bộ nhớ chính. 
+    // Tuy nhiên, với biến kiểu phức tạp, bộ nhớ chính chỉ lưu trữ địa chỉ tham chiếu đến vùng nhớ nơi dữ liệu 
+    // thực sự được lưu trữ. Điều này có nghĩa là khi bạn truyền một đối tượng hoặc mảng vào một hàm, bạn đang 
+    // truyền địa chỉ của đối tượng đó, và bất kỳ thay đổi nào đối với đối tượng trong hàm cũng sẽ ảnh hưởng đến đối 
+    // tượng bên ngoài hàm.
+    </script>
+  </body>
+</html>

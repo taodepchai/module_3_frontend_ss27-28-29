@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function find(arr) {
+        let longest_array = [];
+        let current_array = [];
+
+        for (let i = 0; i < arr.length; i++) {
+          let current_element = arr[i];
+
+          if (current_array.includes(current_element)) {
+            current_array = [current_element];
+          } else {
+            current_array.push(current_element);
+
+            if (current_array.length > longest_array.length) {
+              longest_array = [...current_array];
+            }
+          }
+        }
+
+        return longest_array;
+      }
+
+      let arr = [
+        1, 2, 3, 4, 1, 2, 3, 6, 1, 3, 5, 1, 6, 7, 1, 2, 5, 7, 8, 2, 3, 6,
+      ];
+
+      let result = find(arr);
+      console.log(result);
+    </script>
+  </body>
+</html>
